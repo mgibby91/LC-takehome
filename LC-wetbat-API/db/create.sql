@@ -28,7 +28,7 @@ CREATE TABLE quotes
   destination_location VARCHAR(255) NOT NULL,
   departure_date DATE NOT NULL,
   return_date DATE NOT NULL,
-  status VARCHAR(255) NOT NULL
+  is_completed BOOLEAN NOT NULL DEFAULT TRUE
 );
 
 -- ************************************************************

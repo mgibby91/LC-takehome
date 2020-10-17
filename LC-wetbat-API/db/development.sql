@@ -21,15 +21,15 @@ VALUES
 -- quotes table
 -- ************************************************************
 INSERT INTO quotes
-  (depature_location, destination_location, departure_date, return_date, status)
+  (depature_location, destination_location, departure_date, return_date, is_completed)
 VALUES
-  ('Los Angeles (LAX)', 'Tokyo (HND)', '2019-06-19 13:47:22', '2020-07-15 16:10:51', 'completed'),
-  ('Los Angeles (LAX)', 'London (LHR)', '2019-11-12 16:55:13', '2020-04-25 23:58:30', 'completed'),
-  ('London (LHR)', 'Paris (CDG)', '2020-10-10 03:06:35', '2021-10-12 16:31:34', 'ongoing'),
-  ('Tokyo (HND)', 'Beijing (PEK)', '2020-10-03 15:21:09', '2021-10-07 08:32:21', 'ongoing'),
-  ('Calgary (YYC)', 'Vancouver (YVR)', '2021-01-01 00:14:22', '2021-06-24 07:34:21', 'upcoming'),
-  ('Vancouver (YVR)', 'Tokyo (HND)', '2020-11-04 09:52:08', '2021-02-24 08:30:35', 'upcoming'),
-  ('Calgary (YYC)', 'Los Angeles (LAX', '2020-11-19 20:29:52', '2021-11-22 22:04:47', 'upcoming');
+  ('Los Angeles (LAX)', 'Tokyo (HND)', '2020-06-19 13:47:22', '2021-07-15 16:10:51', false),
+  ('Los Angeles (LAX)', 'London (LHR)', '2020-11-12 16:55:13', '2021-04-25 23:58:30', false),
+  ('London (LHR)', 'Paris (CDG)', '2020-10-10 03:06:35', '2021-10-12 16:31:34', false),
+  ('Tokyo (HND)', 'Beijing (PEK)', '2020-10-03 15:21:09', '2021-10-07 08:32:21', false),
+  ('Calgary (YYC)', 'Vancouver (YVR)', '2021-01-01 00:14:22', '2021-06-24 07:34:21', true),
+  ('Vancouver (YVR)', 'Tokyo (HND)', '2020-11-04 09:52:08', '2021-02-24 08:30:35', true),
+  ('Calgary (YYC)', 'Los Angeles (LAX', '2020-11-19 20:29:52', '2021-11-22 22:04:47', true);
 
 
 -- ************************************************************
@@ -45,7 +45,6 @@ VALUES
   (2, 2, 2),
   (3, 2, 2),
   (4, 2, 2),
-  (5, 2, 2),
   (3, 3, 3),
   (4, 3, 3),
   (5, 3, 3),
@@ -56,16 +55,13 @@ VALUES
   (7, 4, 4),
   (5, 5, 5),
   (6, 5, 5),
-  (7, 5, 5),
-  (8, 5, 5),
   (6, 6, 6),
   (7, 6, 6),
   (8, 6, 6),
   (9, 6, 6),
   (7, 7, 7),
   (8, 7, 7),
-  (9, 7, 7),
-  (10, 7, 7);
+  (9, 7, 7);
 
 
 -- ************************************************************
