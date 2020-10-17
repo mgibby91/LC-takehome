@@ -2,6 +2,10 @@ DROP TABLE IF EXISTS customers
 CASCADE;
 DROP TABLE IF EXISTS quotes
 CASCADE;
+DROP TABLE IF EXISTS customers_quote
+CASCADE;
+DROP TABLE IF EXISTS transportation
+CASCADE;
 
 -- ************************************************************
 -- customers table
@@ -11,7 +15,7 @@ CREATE TABLE customers
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
-  phone_number INTEGER NOT NULL
+  phone_number VARCHAR(255) NOT NULL
 );
 
 -- ************************************************************
@@ -34,6 +38,16 @@ CREATE TABLE customers_quote
 (
   id SERIAL PRIMARY KEY NOT NULL,
   customer_id INTEGER REFERENCES customers(id) ON DELETE CASCADE,
-  bookier_id INTEGER REFERENCES customers(id) ON DELETE CASCADE,
+  booker_id INTEGER REFERENCES customers(id) ON DELETE CASCADE,
   quote_id INTEGER REFERENCES quotes(id) ON DELETE CASCADE
+);
+
+-- ************************************************************
+-- transportation table
+-- ************************************************************
+CREATE TABLE transportation
+(
+  id SERIAL PRIMARY KEY NOT NULL,
+  quote_id INTEGER REFERENCES quotes(id) ON DELETE CASCADE,
+  name VARCHAR(255) NOT NULL
 );
