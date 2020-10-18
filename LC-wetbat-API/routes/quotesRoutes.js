@@ -2,12 +2,12 @@ const express = require('express');
 const router = express.Router();
 
 const {
-  getAllUsers,
-} = require('../lib/userQueries');
+  getAllQuotes,
+} = require('../lib/quotesQueries');
 
-router.get('/', (req, res) => {
+router.get('/quotes', (req, res) => {
 
-  getAllUsers()
+  getAllQuotes()
     .then(result => {
       res.json(result)
     })

@@ -21,7 +21,7 @@ VALUES
 -- quotes table
 -- ************************************************************
 INSERT INTO quotes
-  (depature_location, destination_location, departure_date, return_date, price_cents, is_completed)
+  (departure_location, destination_location, departure_date, return_date, price_cents, is_completed)
 VALUES
   ('Los Angeles (LAX)', 'Tokyo (HND)', '2020-06-19 13:47:22', '2021-07-15 16:10:51', 100000, false),
   ('Los Angeles (LAX)', 'London (LHR)', '2020-11-12 16:55:13', '2021-04-25 23:58:30', 250000, false),

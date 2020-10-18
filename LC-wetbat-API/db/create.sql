@@ -24,7 +24,7 @@ CREATE TABLE customers
 CREATE TABLE quotes
 (
   id SERIAL PRIMARY KEY NOT NULL,
-  depature_location VARCHAR(255) NOT NULL,
+  departure_location VARCHAR(255) NOT NULL,
   destination_location VARCHAR(255) NOT NULL,
   departure_date DATE NOT NULL,
   return_date DATE NOT NULL,

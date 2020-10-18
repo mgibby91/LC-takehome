@@ -25,9 +25,9 @@ db.connect(() => {
 });
 
 // Server routes
-const userRoutes = require('./routes/userRoutes');
+const quotesRoutes = require('./routes/quotesRoutes');
 
-app.use('/api', userRoutes);
+app.use('/api', quotesRoutes);
 
 // **********************************************
 // DB RESET
