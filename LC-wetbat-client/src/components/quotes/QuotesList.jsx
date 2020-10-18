@@ -14,7 +14,7 @@ export default function QuotesList({ quotesData }) {
       id={quote.quotes_id}
       name={quote.name}
       destination={quote.destination_location}
-      price={quote.price}
+      price={quote.price_cents}
       departureDate={quote.departure_date}
     />
   })

@@ -83,6 +83,7 @@
 
 .quotes-list-body-titles {
   display: flex;
+  margin-top: 0.3rem;
   padding: 0.75rem;
   font-size: 0.9rem;
   font-weight: 600;
@@ -97,7 +98,39 @@
   position: absolute;
 }
 
-.quotes-list-name {left: 6%}
-.quotes-list-destination {left: 25%}
-.quotes-list-price {left: 53%}
-.quotes-list-departure-date {left: 70%}
+.quotes-list-name {left: 4%}
+.quotes-list-destination {left: 30%}
+.quotes-list-price {left: 55%}
+.quotes-list-departure-date {left: 71%}
+
+.quotes-list-item {
+  position: relative;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  height: 33px;
+  color: #616169;
+}
+
+.quotes-list-item-name {
+  position: absolute;
+  left: 4%;
+}
+.quotes-list-item-destination {
+  position: absolute;
+  left: 30%;
+}
+.quotes-list-item-price {
+  position: absolute;
+  left: 55%;
+}
+.quotes-list-item-departure-date {
+  position: absolute;
+  left: 71%;
+}
+
+.quotes-list-body-items {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
