@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './styles/App.css';
-import Nav from './components/Nav';
-import SideNav from './components/SideNav';
-import Index from './components/Index';
-import Quotes from './components/Quotes';
+import Nav from './components/nav/Nav';
+import SideNav from './components/nav/SideNav';
+import Index from './components/home/Home';
+import Quotes from './components/quotes/Quotes';
 import axios from 'axios';
 import {
   BrowserRouter as Router,
