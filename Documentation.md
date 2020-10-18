@@ -1,7 +1,7 @@
 ### Architectural/Structural Decisions
 
 * Multi-page application (react-router-dom)
-  - Easily scalable even though not needed for this mini-assignment
+  - Easily scalable
 
 * ElephantSQL
   - Cloud hosting for database security
