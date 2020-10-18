@@ -30,7 +30,23 @@ const getAllQuotes = () => {
     });
 }
 
+const getAllTransportation = () => {
+  return pool.query(`
+    SELECT * FROM transportation;
+  `)
+    .then(res => {
+      if (!res.rows.length) {
+        return null;
+      }
+      return res.rows;
+    })
+    .catch(err => {
+      console.error(err);
+    });
+}
+
 
 module.exports = {
   getAllQuotes,
+  getAllTransportation
 };
