@@ -42,6 +42,7 @@
   align-items: center;
   padding: 0.5rem 1rem;
   border-bottom: 3px solid #ebebf7;
+  color: #616169;
 }
 
 .quotes-sort-price,
@@ -62,8 +63,9 @@
   border: 1px solid #5bbfba;
   color: #5bbfba;
   border-radius: 5px;
-  padding: 0.2rem 0.5rem;
+  padding: 0.3rem 0.5rem;
   width: 55px;
+  font-size: 0.8rem;
 }
 
 .sort-btn:hover {
@@ -71,3 +73,31 @@
   background: #5bbfba;
   color: white;
 }
+
+
+/* Quotes body */
+.quotes-list-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.quotes-list-body-titles {
+  display: flex;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #616169;
+  position: relative;
+}
+
+.quotes-list-name, 
+.quotes-list-destination, 
+.quotes-list-price, 
+.quotes-list-departure-date {
+  position: absolute;
+}
+
+.quotes-list-name {left: 6%}
+.quotes-list-destination {left: 25%}
+.quotes-list-price {left: 53%}
+.quotes-list-departure-date {left: 70%}

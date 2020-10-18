@@ -4,7 +4,7 @@ import '../../styles/quotes.css';
 import QuotesList from './QuotesList';
 import transportationHelper from '../../helpers/transportationHelpers';
 
-export default function Quotes(props) {
+export default function Quotes() {
 
   const [state, setState] = useState({
     quotesData: [],
@@ -42,7 +42,6 @@ export default function Quotes(props) {
     <div className='main-quotes-container'>
       <QuotesList
         quotesData={state.quotesData}
-        transportationData={state.transportationData}
       />
     </div>
   );
