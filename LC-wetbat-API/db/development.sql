@@ -21,15 +21,15 @@ VALUES
 -- quotes table
 -- ************************************************************
 INSERT INTO quotes
-  (depature_location, destination_location, departure_date, return_date, is_completed)
+  (depature_location, destination_location, departure_date, return_date, price_cents, is_completed)
 VALUES
-  ('Los Angeles (LAX)', 'Tokyo (HND)', '2020-06-19 13:47:22', '2021-07-15 16:10:51', false),
-  ('Los Angeles (LAX)', 'London (LHR)', '2020-11-12 16:55:13', '2021-04-25 23:58:30', false),
-  ('London (LHR)', 'Paris (CDG)', '2020-10-10 03:06:35', '2021-10-12 16:31:34', false),
-  ('Tokyo (HND)', 'Beijing (PEK)', '2020-10-03 15:21:09', '2021-10-07 08:32:21', false),
-  ('Calgary (YYC)', 'Vancouver (YVR)', '2021-01-01 00:14:22', '2021-06-24 07:34:21', true),
-  ('Vancouver (YVR)', 'Tokyo (HND)', '2020-11-04 09:52:08', '2021-02-24 08:30:35', true),
-  ('Calgary (YYC)', 'Los Angeles (LAX', '2020-11-19 20:29:52', '2021-11-22 22:04:47', true);
+  ('Los Angeles (LAX)', 'Tokyo (HND)', '2020-06-19 13:47:22', '2021-07-15 16:10:51', 100000, false),
+  ('Los Angeles (LAX)', 'London (LHR)', '2020-11-12 16:55:13', '2021-04-25 23:58:30', 250000, false),
+  ('London (LHR)', 'Paris (CDG)', '2020-10-10 03:06:35', '2021-10-12 16:31:34', 250000, false),
+  ('Tokyo (HND)', 'Beijing (PEK)', '2020-10-03 15:21:09', '2021-10-07 08:32:21', 500000, false),
+  ('Calgary (YYC)', 'Vancouver (YVR)', '2021-01-01 00:14:22', '2021-06-24 07:34:21', 100000, true),
+  ('Vancouver (YVR)', 'Tokyo (HND)', '2020-11-04 09:52:08', '2021-02-24 08:30:35', 250000, true),
+  ('Calgary (YYC)', 'Los Angeles (LAX', '2020-11-19 20:29:52', '2021-11-22 22:04:47', 100000, true);
 
 
 -- ************************************************************
