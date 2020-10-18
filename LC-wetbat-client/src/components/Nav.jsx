@@ -14,11 +14,11 @@ export default function Nav() {
           <h2><Link to='/' id='home-link'>Wet Bat Travel</Link></h2>
         </div>
         <div className="top-nav-right">
-          <input type="text" placeholder='Search' />
+          <input type="text" placeholder='Search' id='nav-search' />
           <FontAwesomeIcon icon={faBell} class='top-nav-icon' />
           <FontAwesomeIcon icon={faComment} class='top-nav-icon' />
           <FontAwesomeIcon icon={faCog} class='top-nav-icon' />
-          <p>user image</p>
+          <img src="https://golf.com/wp-content/uploads/2018/07/tiger_woods_headshot-300x300.png" alt="" className='user-image' />
         </div>
       </div>
     </nav>
