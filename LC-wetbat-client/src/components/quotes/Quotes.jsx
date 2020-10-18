@@ -6,6 +6,11 @@ import transportationHelper from '../../helpers/transportationHelpers';
 
 export default function Quotes(props) {
 
+  const [state, setState] = useState({
+    quotesData: [],
+    transportationData: {}
+  });
+
   useEffect(() => {
 
     const allQuotesPromise = axios.get('/api/quotes/all');
@@ -19,10 +24,12 @@ export default function Quotes(props) {
         allQuotes = allQuotes.data;
         allTransportation = allTransportation.data;
 
-        const filteredTransData = transportationHelper(allTransportation);
+        const cleanTransData = transportationHelper(allTransportation);
+
+        setState({ quotesData: allQuotes, transportationData: cleanTransData })
 
         console.log('allQuotes', allQuotes);
-        console.log('allTrans', filteredTransData);
+        console.log('allTrans', cleanTransData);
 
       })
       .catch(err => {
@@ -34,7 +41,8 @@ export default function Quotes(props) {
   return (
     <div className='main-quotes-container'>
       <QuotesList
-
+        quotesData={state.quotesData}
+        transportationData={state.transportationData}
       />
     </div>
   );

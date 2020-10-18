@@ -26,7 +26,6 @@ db.connect(() => {
 
 // Server routes
 const quotesRoutes = require('./routes/quotesRoutes');
-
 app.use('/api', quotesRoutes);
 
 // **********************************************
@@ -66,6 +65,7 @@ Promise.all([
   });
 
 
+// Start server
 app.listen(PORT, () => {
   console.log(`API listening on port ${PORT}`);
 })
