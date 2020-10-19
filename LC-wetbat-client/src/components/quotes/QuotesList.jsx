@@ -4,9 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCommentDollar } from '@fortawesome/free-solid-svg-icons';
 
 
-export default function QuotesList({ quotesData }) {
-
-  console.log('quotesListData', quotesData);
+export default function QuotesList({
+  quotesData,
+  sortByPrice,
+  sortByTime
+}) {
 
   const quotesListItems = quotesData.map((quote, index) => {
     return <QuotesListItem
@@ -31,13 +33,13 @@ export default function QuotesList({ quotesData }) {
         <div className="quotes-sort-title">Sort By:</div>
         <div className="quotes-sort-price">
           <div className="quotes-sort-price-title">Price</div>
-          <div className="sort-price-btn-low sort-btn">Low</div>
-          <div className="sort-price-btn-high sort-btn">High</div>
+          <div className="sort-price-btn-low sort-btn" onClick={() => sortByPrice(true)}>Low</div>
+          <div className="sort-price-btn-high sort-btn" onClick={() => sortByPrice(false)}>High</div>
         </div>
         <div className="quotes-sort-date">
           <div className="quotes-sort-date-title">Date</div>
-          <div className="sort-date-btn-low sort-btn">New</div>
-          <div className="sort-date-btn-high sort-btn">Old</div>
+          <div className="sort-date-btn-low sort-btn" onClick={() => sortByTime(true)}>Soon</div>
+          <div className="sort-date-btn-high sort-btn" onClick={() => sortByTime(false)}>Far</div>
         </div>
       </div>
 

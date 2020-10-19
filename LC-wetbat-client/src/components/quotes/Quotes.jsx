@@ -35,13 +35,40 @@ export default function Quotes() {
       .catch(err => {
         console.log('quotes err', err);
       })
-  }, [])
+
+  }, []);
+
+  function sortByPrice(isLow) {
+
+    let quotes = state.quotesData;
+    if (isLow) {
+      quotes.sort((a, b) => a.price_cents - b.price_cents);
+    } else {
+      quotes.sort((a, b) => b.price_cents - a.price_cents);
+    }
+    setState({ ...state, quotesData: quotes });
+
+  }
+
+  function sortByTime(isNew) {
+
+    let quotes = state.quotesData;
+    if (isNew) {
+      quotes.sort((a, b) => new Date(a.departure_date) - new Date(b.departure_date));
+    } else {
+      quotes.sort((a, b) => new Date(b.departure_date) - new Date(a.departure_date));
+    }
+    setState({ ...state, quotesData: quotes });
+  }
+
 
 
   return (
     <div className='main-quotes-container'>
       <QuotesList
         quotesData={state.quotesData}
+        sortByPrice={sortByPrice}
+        sortByTime={sortByTime}
       />
     </div>
   );
