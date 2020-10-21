@@ -100,5 +100,8 @@
   color: #5f6caf;
   width: 20px;
   height: 22px;
+}
 
+.side-nav-selected {
+  background: #b3b3b8;
 }
