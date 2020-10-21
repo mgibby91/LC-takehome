@@ -3,11 +3,12 @@ import QuotesListItem from './QuotesListItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCommentDollar } from '@fortawesome/free-solid-svg-icons';
 
-
 export default function QuotesList({
   quotesData,
   sortByPrice,
-  sortByTime
+  sortByTime,
+  setSelectedQuote,
+  currentQuoteID,
 }) {
 
   const quotesListItems = quotesData.map((quote, index) => {
@@ -18,6 +19,8 @@ export default function QuotesList({
       destination={quote.destination_location}
       price={quote.price_cents}
       departureDate={quote.departure_date}
+      selected={quote.quotes_id === currentQuoteID}
+      setSelectedQuote={setSelectedQuote}
     />
   })
 

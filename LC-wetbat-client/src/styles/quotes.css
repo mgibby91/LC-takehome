@@ -112,6 +112,11 @@
   color: #616169;
 }
 
+.quotes-list-item:hover {
+  cursor: pointer;
+  background: #e0e0e4;
+}
+
 .quotes-list-item-name {
   position: absolute;
   left: 4%;
@@ -133,4 +138,8 @@
   margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
+}
+
+.quotes-list-selected {
+  background: #e0e0e4;
 }

@@ -25,9 +25,6 @@ export default function Home(props) {
   return (
     <div className='home-main-container'>
       Home!
-      {props.loggedInStatus && (
-        <button className='logout-btn' onClick={() => props.handleLogout()}>Logout</button>
-      )}
     </div>
   )
 

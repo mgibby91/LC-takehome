@@ -15,7 +15,7 @@ import {
 function App() {
 
   const [state, setState] = useState({
-
+    currentPage: 'Home'
   });
 
   useEffect(() => {
@@ -23,12 +23,21 @@ function App() {
   }, []);
 
 
+  function setSelected(name) {
+    console.log('clicked!', name);
+    setState({ currentPage: name });
+  }
+
+
   return (
     <Router>
       <div className='app-container'>
         <Nav />
         <div className='main-content-container'>
-          <SideNav />
+          <SideNav
+            setSelected={setSelected}
+            selected={state.currentPage}
+          />
           <Switch >
             <Route
               path='/'

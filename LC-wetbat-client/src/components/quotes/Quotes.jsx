@@ -8,7 +8,8 @@ export default function Quotes() {
 
   const [state, setState] = useState({
     quotesData: [],
-    transportationData: {}
+    transportationData: {},
+    currentQuoteID: 0
   });
 
   useEffect(() => {
@@ -61,7 +62,11 @@ export default function Quotes() {
     setState({ ...state, quotesData: quotes });
   }
 
+  function setSelectedQuote(id) {
 
+    console.log('current quote id', id);
+    setState({ ...state, currentQuoteID: id });
+  }
 
   return (
     <div className='main-quotes-container'>
@@ -69,6 +74,8 @@ export default function Quotes() {
         quotesData={state.quotesData}
         sortByPrice={sortByPrice}
         sortByTime={sortByTime}
+        setSelectedQuote={setSelectedQuote}
+        currentQuoteID={state.currentQuoteID}
       />
     </div>
   );
