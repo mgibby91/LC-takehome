@@ -10,7 +10,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./LC-wetbat-API/server.js"
+    "start": "node ./LC-wetbat-API/server.js"
   },
   "repository": {
     "type": "git",
