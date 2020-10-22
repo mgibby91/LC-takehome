@@ -8,7 +8,8 @@ import { faForward } from '@fortawesome/free-solid-svg-icons';
 export default function QuotesView({
   quotesData,
   transportationData,
-  currentQuoteID
+  currentQuoteID,
+  confirmDeleteQuote
 }) {
 
   const [state, setState] = useState({
@@ -21,7 +22,8 @@ export default function QuotesView({
     name: '',
     priceCents: 0,
     phoneNumber: '',
-    email: ''
+    email: '',
+    confirmDelete: false
   });
 
   console.log('quoteview props', quotesData);
@@ -58,6 +60,10 @@ export default function QuotesView({
     return finalStr.slice(0, -2);
   }
 
+  function clickDelete() {
+    setState({ ...state, confirmDelete: true });
+  }
+
   return (
     <div className="card-container">
 
@@ -66,48 +72,61 @@ export default function QuotesView({
         <div className="quotes-list-title-title">Quote Details</div>
       </div>
 
-      <div className="quotes-view-body">
-        <div className="quotes-view-item">
-          <div className="quotes-view-item-title">FROM</div>
-          <div className="quotes-view-item-content">{state.departureLocation}</div>
-        </div>
-        <div className="quotes-view-item">
-          <div className="quotes-view-item-title">DESTINATION</div>
-          <div className="quotes-view-item-content">{state.distinationLocation}</div>
-        </div>
-        <div className="quotes-view-item">
-          <div className="quotes-view-item-title">DEPARTURE DATE</div>
-          <div className="quotes-view-item-content">{state.departureDate ? humanReadableDate(state.departureDate) : ''}</div>
-        </div>
-        <div className="quotes-view-item">
-          <div className="quotes-view-item-title">RETURN DATE</div>
-          <div className="quotes-view-item-content">{state.departureDate ? humanReadableDate(state.returnDate) : ''}</div>
-        </div>
-        <div className="quotes-view-item">
-          <div className="quotes-view-item-title">TRAVELLERS NUMBER</div>
-          <div className="quotes-view-item-content">{state.travellersNumber}</div>
-        </div>
-        <div className="quotes-view-item">
-          <div className="quotes-view-item-title">TRANSPORTATION</div>
-          <div className="quotes-view-item-content">{setTransportationList(state.transportation)}</div>
-        </div>
-        <div className="quotes-view-item">
-          <div className="quotes-view-item-title">NAME</div>
-          <div className="quotes-view-item-content">{state.name}</div>
-        </div>
-        <div className="quotes-view-item">
-          <div className="quotes-view-item-title">PRICE</div>
-          <div className="quotes-view-item-content">{state.priceCents ? dollarsConverter(state.priceCents) : ''}</div>
-        </div>
-        <div className="quotes-view-item">
-          <div className="quotes-view-item-title">CONTACT INFO</div>
-          <div className="quotes-view-item-content">{state.email ? state.email + ' / ' + state.phoneNumber : ''}</div>
-        </div>
-        <div className="quotes-view-item" id='quotes-view-btns'>
+      {!state.confirmDelete && (
 
+        <div className="quotes-view-body">
+          <div className="quotes-view-item">
+            <div className="quotes-view-item-title">FROM</div>
+            <div className="quotes-view-item-content">{state.departureLocation}</div>
+          </div>
+          <div className="quotes-view-item">
+            <div className="quotes-view-item-title">DESTINATION</div>
+            <div className="quotes-view-item-content">{state.distinationLocation}</div>
+          </div>
+          <div className="quotes-view-item">
+            <div className="quotes-view-item-title">DEPARTURE DATE</div>
+            <div className="quotes-view-item-content">{state.departureDate ? humanReadableDate(state.departureDate) : ''}</div>
+          </div>
+          <div className="quotes-view-item">
+            <div className="quotes-view-item-title">RETURN DATE</div>
+            <div className="quotes-view-item-content">{state.departureDate ? humanReadableDate(state.returnDate) : ''}</div>
+          </div>
+          <div className="quotes-view-item">
+            <div className="quotes-view-item-title">TRAVELLERS NUMBER</div>
+            <div className="quotes-view-item-content">{state.travellersNumber}</div>
+          </div>
+          <div className="quotes-view-item">
+            <div className="quotes-view-item-title">TRANSPORTATION</div>
+            <div className="quotes-view-item-content">{setTransportationList(state.transportation)}</div>
+          </div>
+          <div className="quotes-view-item">
+            <div className="quotes-view-item-title">NAME</div>
+            <div className="quotes-view-item-content">{state.name}</div>
+          </div>
+          <div className="quotes-view-item">
+            <div className="quotes-view-item-title">PRICE</div>
+            <div className="quotes-view-item-content">{state.priceCents ? dollarsConverter(state.priceCents) : ''}</div>
+          </div>
+          <div className="quotes-view-item">
+            <div className="quotes-view-item-title">CONTACT INFO</div>
+            <div className="quotes-view-item-content">{state.email ? state.email + ' / ' + state.phoneNumber : ''}</div>
+          </div>
+          <div className="quotes-view-item" id='quotes-view-btns'>
+            <div className="quotes-edit-btn quotes-btn">EDIT</div>
+            <div className="quotes-delete-btn quotes-btn" onClick={() => clickDelete()}>DELETE</div>
+          </div>
         </div>
-      </div>
+      )}
 
+      {state.confirmDelete && (
+        <div className="confirm-delete-container">
+          <div className="confirm-delete-title">Are you sure you want to delete?</div>
+          <div className="confirm-delete-btns-container">
+            <div className="confirm-cancel-btn" onClick={() => setState({ ...state, confirmDelete: false })}>Cancel</div>
+            <div className="confirm-confirm-btn" onClick={() => confirmDeleteQuote(currentQuoteID)}>Confirm</div>
+          </div>
+        </div>
+      )}
 
     </div>
   )

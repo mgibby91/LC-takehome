@@ -67,6 +67,10 @@ export default function Quotes() {
     setState({ ...state, currentQuoteID: id });
   }
 
+  function confirmDeleteQuote(quoteID) {
+    console.log('confirm delete', quoteID);
+  }
+
   return (
     <div className='main-quotes-container'>
       <QuotesList
@@ -80,6 +84,7 @@ export default function Quotes() {
         quotesData={state.quotesData}
         transportationData={state.transportationData}
         currentQuoteID={state.currentQuoteID}
+        confirmDeleteQuote={confirmDeleteQuote}
       />
     </div>
   );

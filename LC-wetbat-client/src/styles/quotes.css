@@ -173,3 +173,95 @@
   font-weight: 600;
   font-size: 0.95rem;
 }
+
+#quotes-view-btns {
+  background: white;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.quotes-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  border-radius: 6px;
+}
+
+.quotes-edit-btn {
+  color: #3385ff;
+  border: 2px solid #3385ff;
+}
+
+.quotes-edit-btn:hover {
+  cursor: pointer;
+  background: #3385ff;
+  color: white;
+}
+
+.quotes-delete-btn {
+  color: rgb(255, 90, 90);
+  border: 2px solid rgb(255, 90, 90);
+}
+
+.quotes-delete-btn:hover {
+  cursor: pointer;
+  background: rgb(255, 90, 90);
+  color: white;
+}
+
+
+/* Confirm delete */
+.confirm-delete-container {
+  height: 65%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirm-delete-title {
+  font-size: 1.5rem;
+  color: #616169;
+}
+
+.confirm-delete-btns-container {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.confirm-cancel-btn {
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  color: rgb(255, 90, 90);
+  border: 2px solid rgb(255, 90, 90);
+}
+
+.confirm-cancel-btn:hover {
+  cursor: pointer;
+  background: rgb(255, 90, 90);
+  color: white;
+}
+
+.confirm-confirm-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  color: #5bbfba;
+  border: 2px solid #5bbfba;
+}
+
+.confirm-confirm-btn:hover {
+  cursor: pointer;
+  background: #5bbfba;
+  color: white;
+}
