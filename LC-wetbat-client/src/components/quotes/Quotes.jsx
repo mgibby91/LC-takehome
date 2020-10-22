@@ -11,6 +11,7 @@ export default function Quotes() {
     quotesData: [],
     transportationData: {},
     currentQuoteID: 0,
+    deleting: false,
     triggerCount: 0
   });
 
@@ -69,13 +70,18 @@ export default function Quotes() {
   }
 
   function confirmDeleteQuote(quoteID) {
-    axios.put('/api/quotes/delete', { quoteID })
-      .then(res => {
-        setState({
-          ...state,
-          triggerCount: state.triggerCount + 1,
+    setState({ ...state, deleting: true });
+    // for effect...
+    setTimeout(() => {
+      axios.put('/api/quotes/delete', { quoteID })
+        .then(() => {
+          setState({
+            ...state,
+            triggerCount: state.triggerCount + 1,
+            deleting: false,
+          });
         })
-      })
+    }, 1500);
   }
 
   return (
@@ -86,6 +92,7 @@ export default function Quotes() {
         sortByTime={sortByTime}
         setSelectedQuote={setSelectedQuote}
         currentQuoteID={state.currentQuoteID}
+        deleting={state.deleting}
       />
       <QuotesView
         quotesData={state.quotesData}

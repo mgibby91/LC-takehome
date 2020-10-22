@@ -60,8 +60,20 @@ export default function QuotesView({
     setState({ ...state, confirmDelete: true });
   }
 
-  function resetQuoteView() {
-    setState({ ...state, confirmDelete: false });
+  function deleteQuote() {
+    setState({
+      departureLocation: '',
+      distinationLocation: '',
+      departureDate: '',
+      returnDate: '',
+      travellersNumber: '',
+      transportation: [],
+      name: '',
+      priceCents: 0,
+      phoneNumber: '',
+      email: '',
+      confirmDelete: false,
+    });
     confirmDeleteQuote(currentQuoteID);
   }
 
@@ -124,7 +136,7 @@ export default function QuotesView({
           <div className="confirm-delete-title">Are you sure you want to delete?</div>
           <div className="confirm-delete-btns-container">
             <div className="confirm-cancel-btn" onClick={() => setState({ ...state, confirmDelete: false })}>Cancel</div>
-            <div className="confirm-confirm-btn" onClick={() => resetQuoteView()}>Confirm</div>
+            <div className="confirm-confirm-btn" onClick={() => deleteQuote()}>Confirm</div>
           </div>
         </div>
       )}

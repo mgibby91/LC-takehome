@@ -9,6 +9,7 @@ export default function QuotesList({
   sortByTime,
   setSelectedQuote,
   currentQuoteID,
+  deleting
 }) {
 
   const quotesListItems = quotesData.map((quote, index) => {
@@ -46,17 +47,28 @@ export default function QuotesList({
         </div>
       </div>
 
-      <div className="quotes-list-body">
-        <div className="quotes-list-body-titles">
-          <div className="quotes-list-name">NAME</div>
-          <div className="quotes-list-destination">DESTINATION</div>
-          <div className="quotes-list-price">PRICE</div>
-          <div className="quotes-list-departure-date">DEPARTURE DATE</div>
+      {!deleting && (
+        <div className="quotes-list-body">
+          <div className="quotes-list-body-titles">
+            <div className="quotes-list-name">NAME</div>
+            <div className="quotes-list-destination">DESTINATION</div>
+            <div className="quotes-list-price">PRICE</div>
+            <div className="quotes-list-departure-date">DEPARTURE DATE</div>
+          </div>
+          <div className="quotes-list-body-items">
+            {quotesListItems}
+          </div>
         </div>
-        <div className="quotes-list-body-items">
-          {quotesListItems}
+      )}
+
+      {deleting && (
+        <div className="quotes-deleting-container">
+          <div className="quotes-deleting-text">
+            Deleting...
+          </div>
+          <div className="loader"></div>
         </div>
-      </div>
+      )}
     </div>
   )
 
