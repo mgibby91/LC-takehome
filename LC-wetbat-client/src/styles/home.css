@@ -1,0 +1,47 @@
+.home-main-container {
+  padding: 2.25rem;
+  background: #ebebf7;
+  width: 100%;
+  display: flex
+}
+
+.card-container {
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+  width: 50%;
+  height: 400px;
+  margin: 0 1rem;
+}
+
+.extended-card-container {
+  border-radius: 10px;
+  background: linear-gradient(to right, #5BBFBA, rgb(69, 97, 255));
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+  width: 100%;
+  height: 400px;
+  margin: 0 1rem;
+  padding: 2rem;
+}
+
+/* Main card */
+.main-card-left {
+  width: 40%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.main-card-left-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 3rem;
+}
+
+.main-card-left-text {
+  line-height: 1.2rem;
+}
