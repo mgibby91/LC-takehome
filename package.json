@@ -1,0 +1,25 @@
+{
+  "name": "launch-code-takehome",
+  "version": "1.0.0",
+  "description": "This app-feature was created as a take-home challenge for the Launch Code interview process.",
+  "main": "index.js",
+  "dependencies": {
+    "class-names": "^1.0.0",
+    "classnames": "^2.2.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgibby91/LC-takehome.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgibby91/LC-takehome/issues"
+  },
+  "homepage": "https://github.com/mgibby91/LC-takehome#readme"
+}
