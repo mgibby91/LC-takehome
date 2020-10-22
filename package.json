@@ -4,6 +4,10 @@
   "description": "This app-feature was created as a take-home challenge for the Launch Code interview process.",
   "main": "index.js",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "class-names": "^1.0.0",
     "classnames": "^2.2.6",
     "cors": "^2.8.5",
