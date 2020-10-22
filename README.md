@@ -20,20 +20,20 @@ Or, for this repo and clone onto your machine. Then, from the LC-wetbat-API run 
 
 * View a list of all the current quotes
 
-![screenshot of quotes list]('https://github.com/mgibby91/LC-takehome/blob/master/screenshots/WB-quotes-list.png?raw=true')
+![screenshot of quotes list](https://github.com/mgibby91/LC-takehome/blob/master/screenshots/WB-quotes-list.png?raw=true)
 
 #### View quote details
 
 * View details of selected quote
 
-![screenshot of quote details]('https://github.com/mgibby91/LC-takehome/blob/master/screenshots/WB-quotes-view.png?raw=true')
+![screenshot of quote details](https://github.com/mgibby91/LC-takehome/blob/master/screenshots/WB-quotes-view.png?raw=true)
 
 ##### Sort quotes
 
 * Sort quotes by price or date
 
-![screenshot of sorting quotes]('https://github.com/mgibby91/LC-takehome/blob/master/screenshots/WB-quotes-sort.png?raw=true')
+![screenshot of sorting quotes](https://github.com/mgibby91/LC-takehome/blob/master/screenshots/WB-quotes-sort.png?raw=true)
 
 #### Delete quote
 
-![screenshot of deleting quote]('https://github.com/mgibby91/LC-takehome/blob/master/screenshots/WB-quotes-delete.png?raw=true')
+![screenshot of deleting quote](https://github.com/mgibby91/LC-takehome/blob/master/screenshots/WB-quotes-delete.png?raw=true)
