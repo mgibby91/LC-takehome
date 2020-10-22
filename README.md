@@ -28,7 +28,7 @@ Or, for this repo and clone onto your machine. Then, from the LC-wetbat-API run 
 
 ![screenshot of quote details](https://github.com/mgibby91/LC-takehome/blob/master/screenshots/WB-quotes-view.png?raw=true)
 
-##### Sort quotes
+#### Sort quotes
 
 * Sort quotes by price or date
 
