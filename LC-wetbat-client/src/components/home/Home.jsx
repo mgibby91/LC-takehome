@@ -36,9 +36,7 @@ export default function Home(props) {
         <div className="main-card-right"></div>
       </div>
 
-      <HomeQuickQuote
-
-      />
+      <HomeQuickQuote />
 
     </div>
   )

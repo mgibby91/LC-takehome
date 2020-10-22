@@ -125,7 +125,6 @@ export default function QuotesView({
             <div className="quotes-view-item-content">{state.email ? state.email + ' / ' + state.phoneNumber : ''}</div>
           </div>
           <div className="quotes-view-item" id='quotes-view-btns'>
-            <div className="quotes-edit-btn quotes-btn">EDIT</div>
             <div className="quotes-delete-btn quotes-btn" onClick={() => clickDelete()}>DELETE</div>
           </div>
         </div>

@@ -46,3 +46,20 @@
 .main-card-left-text {
   line-height: 1.2rem;
 }
+
+.quick-quote-body {
+  color: #616169;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quick-quote-body-text {
+  font-size: 1.75rem;
+  color: white;
+  border: 1px solid #4b568b;
+  background: #5f6caf;
+  padding: 1rem 1.5rem;
+  border-radius: 3px;
+}

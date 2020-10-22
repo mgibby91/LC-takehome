@@ -13,7 +13,7 @@ export default function HomeQuickQuote() {
       </div>
 
       <div className="quick-quote-body">
-
+        <div className="quick-quote-body-text">In development</div>
       </div>
     </div>
   )
