@@ -3,7 +3,8 @@ const router = express.Router();
 
 const {
   getAllQuotes,
-  getAllTransportation
+  getAllTransportation,
+  deleteQuoteByID,
 } = require('../lib/quotesQueries');
 
 router.get('/quotes/all', (req, res) => {
@@ -21,5 +22,15 @@ router.get('/quotes/transportation', (req, res) => {
       res.json(result)
     })
 });
+
+router.put('/quotes/delete', (req, res) => {
+
+  deleteQuoteByID(req.body.quoteID)
+    .then(result => {
+      res.json(result)
+    })
+})
+
+
 
 module.exports = router;

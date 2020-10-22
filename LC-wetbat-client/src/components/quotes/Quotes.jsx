@@ -10,7 +10,8 @@ export default function Quotes() {
   const [state, setState] = useState({
     quotesData: [],
     transportationData: {},
-    currentQuoteID: 0
+    currentQuoteID: 0,
+    triggerCount: 0
   });
 
   useEffect(() => {
@@ -38,7 +39,7 @@ export default function Quotes() {
         console.log('quotes err', err);
       })
 
-  }, []);
+  }, [state.triggerCount]);
 
   function sortByPrice(isLow) {
 
@@ -68,7 +69,13 @@ export default function Quotes() {
   }
 
   function confirmDeleteQuote(quoteID) {
-    console.log('confirm delete', quoteID);
+    axios.put('/api/quotes/delete', { quoteID })
+      .then(res => {
+        setState({
+          ...state,
+          triggerCount: state.triggerCount + 1,
+        })
+      })
   }
 
   return (

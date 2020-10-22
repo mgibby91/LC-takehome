@@ -26,10 +26,6 @@ export default function QuotesView({
     confirmDelete: false
   });
 
-  console.log('quoteview props', quotesData);
-  console.log('quoteview props', transportationData);
-  console.log('quoteview props', currentQuoteID);
-
   // Set current quote
   useEffect(() => {
 
@@ -62,6 +58,11 @@ export default function QuotesView({
 
   function clickDelete() {
     setState({ ...state, confirmDelete: true });
+  }
+
+  function resetQuoteView() {
+    setState({ ...state, confirmDelete: false });
+    confirmDeleteQuote(currentQuoteID);
   }
 
   return (
@@ -123,7 +124,7 @@ export default function QuotesView({
           <div className="confirm-delete-title">Are you sure you want to delete?</div>
           <div className="confirm-delete-btns-container">
             <div className="confirm-cancel-btn" onClick={() => setState({ ...state, confirmDelete: false })}>Cancel</div>
-            <div className="confirm-confirm-btn" onClick={() => confirmDeleteQuote(currentQuoteID)}>Confirm</div>
+            <div className="confirm-confirm-btn" onClick={() => resetQuoteView()}>Confirm</div>
           </div>
         </div>
       )}

@@ -45,8 +45,27 @@ const getAllTransportation = () => {
     });
 }
 
+const deleteQuoteByID = (quoteID) => {
+  return pool.query(`
+    DELETE FROM quotes
+    WHERE quotes.id = $1
+    RETURNING *;
+  `, [quoteID])
+    .then(res => {
+      if (!res.rows.length) {
+        return null;
+      }
+      return res.rows;
+    })
+    .catch(err => {
+      console.error(err);
+    });
+
+}
+
 
 module.exports = {
   getAllQuotes,
-  getAllTransportation
+  getAllTransportation,
+  deleteQuoteByID,
 };
