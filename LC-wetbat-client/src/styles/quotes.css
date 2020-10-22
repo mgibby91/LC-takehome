@@ -138,6 +138,7 @@
   margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 
 .quotes-list-selected {
