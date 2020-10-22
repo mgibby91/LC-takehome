@@ -79,6 +79,8 @@
 .quotes-list-body {
   display: flex;
   flex-direction: column;
+  overflow: auto;
+  height: 272px;
 }
 
 .quotes-list-body-titles {
@@ -138,7 +140,6 @@
   margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
-  overflow: auto;
 }
 
 .quotes-list-selected {
