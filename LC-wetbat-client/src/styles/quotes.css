@@ -166,3 +166,10 @@
   font-weight: 600;
   color: #616169;
 }
+
+.quotes-view-item-content {
+  margin-top: 0.25rem;
+  color: #5bbfba;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
