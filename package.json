@@ -22,7 +22,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./LC-wetbat-API/server.js"
+    "start": "node ./LC-wetbat-API/server.js",
+    "build": "react-scripts build ./LC-wetbat-client/"
   },
   "repository": {
     "type": "git",
