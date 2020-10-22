@@ -23,7 +23,8 @@ export default function QuotesView({
     priceCents: 0,
     phoneNumber: '',
     email: '',
-    confirmDelete: false
+    confirmDelete: false,
+    showError: false,
   });
 
   // Set current quote
@@ -57,8 +58,15 @@ export default function QuotesView({
   }
 
   function clickDelete() {
-
-    setState({ ...state, confirmDelete: true });
+    // error handling for no quote selected
+    if (!state.departureLocation) {
+      setState({ ...state, showError: true })
+      setTimeout(() => {
+        setState({ ...state, showError: false })
+      }, 2500);
+    } else {
+      setState({ ...state, confirmDelete: true });
+    }
   }
 
   function deleteQuote() {
@@ -84,6 +92,9 @@ export default function QuotesView({
       <div className="quotes-list-title">
         <FontAwesomeIcon icon={faForward} id='quotes-view-icon' />
         <div className="quotes-list-title-title">Quote Details</div>
+        {state.showError && (
+          <div className="quote-error-msg">Please select quote to delete!</div>
+        )}
       </div>
 
       {!state.confirmDelete && (
