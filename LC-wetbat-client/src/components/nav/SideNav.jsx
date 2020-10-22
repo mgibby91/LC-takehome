@@ -9,8 +9,6 @@ export default function SideNav({
   setSelected
 }) {
 
-  // console.log('sidenav props', props);
-
   return (
     <div className="side-nav-container">
       <ul className="nav-links">

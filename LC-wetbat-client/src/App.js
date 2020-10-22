@@ -4,7 +4,7 @@ import Nav from './components/nav/Nav';
 import SideNav from './components/nav/SideNav';
 import Index from './components/home/Home';
 import Quotes from './components/quotes/Quotes';
-import axios from 'axios';
+// import axios from 'axios';
 import {
   BrowserRouter as Router,
   Switch,
@@ -24,7 +24,6 @@ function App() {
 
 
   function setSelected(name) {
-    console.log('clicked!', name);
     setState({ currentPage: name });
   }
 

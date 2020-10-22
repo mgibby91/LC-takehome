@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../../styles/quotes.css';
 import QuotesList from './QuotesList';
+import QuotesView from './QuotesView';
 import transportationHelper from '../../helpers/transportationHelpers';
 
 export default function Quotes() {
@@ -63,8 +64,6 @@ export default function Quotes() {
   }
 
   function setSelectedQuote(id) {
-
-    console.log('current quote id', id);
     setState({ ...state, currentQuoteID: id });
   }
 
@@ -75,6 +74,11 @@ export default function Quotes() {
         sortByPrice={sortByPrice}
         sortByTime={sortByTime}
         setSelectedQuote={setSelectedQuote}
+        currentQuoteID={state.currentQuoteID}
+      />
+      <QuotesView
+        quotesData={state.quotesData}
+        transportationData={state.transportationData}
         currentQuoteID={state.currentQuoteID}
       />
     </div>
