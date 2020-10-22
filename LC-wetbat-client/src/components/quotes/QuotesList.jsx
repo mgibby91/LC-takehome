@@ -9,7 +9,8 @@ export default function QuotesList({
   sortByTime,
   setSelectedQuote,
   currentQuoteID,
-  deleting
+  deleting,
+  loadingQuotes
 }) {
 
   const quotesListItems = quotesData.map((quote, index) => {
@@ -47,7 +48,7 @@ export default function QuotesList({
         </div>
       </div>
 
-      {!deleting && (
+      {(!deleting && !loadingQuotes) && (
         <div className="quotes-list-body">
           <div className="quotes-list-body-titles">
             <div className="quotes-list-name">NAME</div>
@@ -65,6 +66,15 @@ export default function QuotesList({
         <div className="quotes-deleting-container">
           <div className="quotes-deleting-text">
             Deleting...
+          </div>
+          <div className="loader"></div>
+        </div>
+      )}
+
+      {loadingQuotes && (
+        <div className="quotes-deleting-container">
+          <div className="quotes-deleting-text">
+            Loading quotes...
           </div>
           <div className="loader"></div>
         </div>

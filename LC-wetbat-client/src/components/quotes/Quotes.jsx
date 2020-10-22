@@ -12,7 +12,8 @@ export default function Quotes() {
     transportationData: {},
     currentQuoteID: 0,
     deleting: false,
-    triggerCount: 0
+    triggerCount: 0,
+    loadingQuotes: true
   });
 
   useEffect(() => {
@@ -30,7 +31,7 @@ export default function Quotes() {
 
         const cleanTransData = transportationHelper(allTransportation);
 
-        setState({ quotesData: allQuotes, transportationData: cleanTransData });
+        setState({ quotesData: allQuotes, transportationData: cleanTransData, loadingQuotes: false });
 
       })
       .catch(err => {
@@ -90,6 +91,7 @@ export default function Quotes() {
         setSelectedQuote={setSelectedQuote}
         currentQuoteID={state.currentQuoteID}
         deleting={state.deleting}
+        loadingQuotes={state.loadingQuotes}
       />
       <QuotesView
         quotesData={state.quotesData}
