@@ -47,7 +47,7 @@ export default function QuotesView({
       }
     }
 
-  }, [currentQuoteID]);
+  }, [currentQuoteID, quotesData, transportationData]);
 
   function setTransportationList(transportationArr) {
     let finalStr = '';

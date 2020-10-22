@@ -1,29 +1,8 @@
 import React from 'react';
 import '../../styles/home.css';
 import HomeQuickQuote from './HomeQuickQuote';
-import axios from 'axios';
-import { useEffect } from 'react';
 
-
-export default function Home(props) {
-
-  // console.log('indexProps', props);
-
-  useEffect(() => {
-
-    const promiseIndex = axios.get('/api/');
-
-    Promise.all([promiseIndex])
-      .then(all => {
-        let [indexData] = all;
-        indexData = indexData.data;
-        console.log('indexdataafter', indexData);
-      })
-      .catch(err => {
-        console.log('indexError', err);
-      })
-
-  }, []);
+export default function Home() {
 
   return (
     <div className='home-main-container'>

@@ -30,10 +30,7 @@ export default function Quotes() {
 
         const cleanTransData = transportationHelper(allTransportation);
 
-        setState({ quotesData: allQuotes, transportationData: cleanTransData })
-
-        console.log('allQuotes', allQuotes);
-        console.log('allTrans', cleanTransData);
+        setState({ quotesData: allQuotes, transportationData: cleanTransData });
 
       })
       .catch(err => {

@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './styles/App.css';
 import Nav from './components/nav/Nav';
 import SideNav from './components/nav/SideNav';
 import Index from './components/home/Home';
 import Quotes from './components/quotes/Quotes';
-// import axios from 'axios';
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,15 +17,9 @@ function App() {
     currentPage: 'Home'
   });
 
-  useEffect(() => {
-
-  }, []);
-
-
   function setSelected(name) {
     setState({ currentPage: name });
   }
-
 
   return (
     <Router>
