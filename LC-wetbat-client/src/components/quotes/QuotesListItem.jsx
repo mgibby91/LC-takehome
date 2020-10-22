@@ -1,4 +1,6 @@
 import React from 'react';
+import dollarsConverter from '../../helpers/dollarsConverter';
+import humanReadableDate from '../../helpers/humanReadableDate';
 
 const classNames = require('classnames');
 
@@ -14,11 +16,8 @@ export default function QuotesListItem({
 
   const quoteListClass = classNames('quotes-list-item', { 'quotes-list-selected': selected })
 
-  let dollars = price / 100;
-  dollars = dollars.toLocaleString("en-US", { style: "currency", currency: "USD" });
-
-  const date = new Date(departureDate).toString().split(' ');
-  const finalDate = `${date[1]} ${date[2]}, ${date[3]}`
+  const dollars = dollarsConverter(price);
+  const finalDate = humanReadableDate(departureDate);
 
   return (
     <div className={quoteListClass} onClick={() => setSelectedQuote(id)}>
