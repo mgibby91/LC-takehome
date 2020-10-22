@@ -57,6 +57,7 @@ export default function QuotesView({
   }
 
   function clickDelete() {
+
     setState({ ...state, confirmDelete: true });
   }
 

@@ -57,9 +57,15 @@
 
 .quick-quote-body-text {
   font-size: 1.75rem;
-  color: white;
-  border: 1px solid #4b568b;
+  color: #5f6caf;
+  border: 1px solid #5f6caf;
   background: #5f6caf;
+  background: #ebebf7;
   padding: 1rem 1.5rem;
   border-radius: 3px;
+  margin: 0 1rem;
+}
+
+#quotes-in-development-icon {
+  margin-right: 1rem;
 }
