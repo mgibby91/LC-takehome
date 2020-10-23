@@ -6,7 +6,7 @@ This app-feature was created as a take-home challenge for the Launch Code interv
 
 Visit https://wetbat-takehome.netlify.app/. 
 
-Or, for this repo and clone onto your machine. Then, from the LC-wetbat-API run `npm i` followed by `npm start` and from the LC-wetbat-client run `npm i` followed by `npm start`, which will automatically open the client. Open another tab and run `http://localhost:8088/api/debug/reset` to reset the DB.
+Or, fork this repo and clone onto your machine. Then, from the LC-wetbat-API run `npm i` followed by `npm start` and from the LC-wetbat-client run `npm i` followed by `npm start`, which will automatically open the client. Open another tab and run `http://localhost:8088/api/debug/reset` to reset the DB.
 
 ### Technologies Used
 
